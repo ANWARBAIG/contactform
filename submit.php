@@ -1,13 +1,13 @@
 <?php
 // Establish MySQL connection
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "contact_form";
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
+// $servername = "localhost";
+// $username = "username";
+// $password = "password";
+// $dbname = "contact_form";
+// $conn = mysqli_connect($servername, $username, $password, $dbname);
+// if (!$conn) {
+//   die("Connection failed: " . mysqli_connect_error());
+// }
 
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -68,10 +68,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo '</div>';
   } else {
     // Insert data into database
-    $sql = "INSERT INTO contacts(title, firstname, lastname, dob, tel, file, email, message) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-    $stmt = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($stmt, "ssssssss", $title, $firstname, $lastname, $dob, $tel, $file_contents, $email, $message);
-    mysqli_stmt_execute($stmt);
+    // $sql = "INSERT INTO contacts(title, firstname, lastname, dob, tel, file, email, message) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    // $stmt = mysqli_prepare($conn, $sql);
+    // mysqli_stmt_bind_param($stmt, "ssssssss", $title, $firstname, $lastname, $dob, $tel, $file_contents, $email, $message);
+    // mysqli_stmt_execute($stmt);
 
     // Display success message
     $fullname = $title . ' ' . $firstname . ' ' . $lastname;
@@ -89,4 +89,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 // Close MySQL connection
-mysqli_close($conn);
+// mysqli_close($conn);
