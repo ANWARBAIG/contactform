@@ -1,5 +1,5 @@
 body {
-  background-image: url('./assets/contact.jpg'); 
+  background-image: url('./contact.jpg'); 
   background-size: cover; /* This will make the image cover the entire background of the page, cropping the excess */
   background-position: center; /* This will position the image in the center of the page */
   background-repeat: no-repeat; /* This will prevent the image from repeating */
